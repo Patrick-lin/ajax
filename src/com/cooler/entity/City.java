@@ -60,4 +60,8 @@ public class City {
     public int hashCode() {
         return Objects.hash(getCityId(), getCityName(), getProvinceId());
     }
+
+    public City(Integer cityId) {
+        this.cityId = cityId;
+    }
 }

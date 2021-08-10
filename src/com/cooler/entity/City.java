@@ -1,5 +1,7 @@
 package com.cooler.entity;
 
+import java.util.Objects;
+
 public class City {
     private Integer cityId;
     private String cityName;
@@ -42,5 +44,20 @@ public class City {
         this.cityId = cityId;
         this.cityName = cityName;
         this.provinceId = provinceId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof City)) return false;
+        City city = (City) o;
+        return Objects.equals(getCityId(), city.getCityId()) &&
+                Objects.equals(getCityName(), city.getCityName()) &&
+                Objects.equals(getProvinceId(), city.getProvinceId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCityId(), getCityName(), getProvinceId());
     }
 }

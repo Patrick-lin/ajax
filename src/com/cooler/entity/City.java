@@ -61,7 +61,8 @@ public class City {
         return Objects.hash(getCityId(), getCityName(), getProvinceId());
     }
 
-    public City(Integer cityId) {
+    public int City1(Integer cityId,String name) {
         this.cityId = cityId;
+        return 0;
     }
 }
